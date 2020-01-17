@@ -37,7 +37,7 @@ module.exports = function(app) {
     //------- rewrite notes to notePad.json
     app.delete("/api.notes/:noteID", function(request, response) {
         // read notepad.json file
-        
+    
         // clear array in the index position corresponding to id query
         // write notes back to notePad.json
         // return notes to client
