@@ -6,11 +6,10 @@ module.exports = function (app) {
 // html get requests
 // index.html
 app.get("/", function(response, request) {
-
-    response.sendFile(path.resolve("../index.html"));
+    response.sendFile(path.join("../public/index.html"));
 })
 // notes.html
 app.get("/notes", function(response,request) {
-    response.sendFile(path.resolve("../public/notes.html"));
+    response.sendFile(path.join("../public/notes.html"));
 });
 };
