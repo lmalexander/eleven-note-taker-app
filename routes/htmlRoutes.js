@@ -1,15 +1,16 @@
-// dependencies
+// --------------------------------------------- dependencies
 const path = require("path");
 
-// --------------- routing
-module.exports = function (app) {
-// html get requests
+
+module.exports = function(app) {
+// --------------------------------------------- routing
+// ------------------------- html GET request
 // index.html
 app.get("/", function(request, response) {
-    response.sendFile(path.join(__dirname, "/public/index.html"));
-})
+    response.sendFile(path.join(__dirname, "../public/index.html"));
+});
 // notes.html
 app.get("/notes", function(request, response) {
-    response.sendFile(path.join(__dirname, "/public/notes.html"));
+    response.sendFile(path.join(__dirname, "../public/notes.html"));
 });
 };
