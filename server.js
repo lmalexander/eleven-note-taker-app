@@ -1,5 +1,6 @@
 //---------------------------------npm dependencies
 const express = require("express");
+const path = require("path");
 
 //--------------------------------express server configuration 
 // create an "express" server
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 7000;
 // set up new express app to handle data parsing
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 
 //----------------------------------server routing files
 require("./routes/apiRoutes")(app);
