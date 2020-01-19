@@ -1,52 +1,22 @@
 [
           {
-                    "noteTitle": "juice, lizzo",
-                    "noteBody": "blame it on my juice, blame it blame it on my juice",
-                    "id": ""
+                    "title": "juice, lizzo",
+                    "text": "blame it on my juice, blame it blame it on my juice",
+                    "id": 356
           },
           {
-                    "noteTitle": "doin too much, kash doll",
-                    "noteBody": "period, they like, she can't be serious, they see that plane interior, they want to know who lear it is",
-                    "id": ""
+                    "title": "doin too much, kash doll",
+                    "text": "period, they like, she can't be serious, they see that plane interior, they want to know who lear it is",
+                    "id": 678
           },
           {
-                    "noteTitle": "no lames, kash doll ft. summer walker",
-                    "noteBody": "don't kick it with no lames, send them back from where they came",
-                    "id": ""
+                    "title": "no lames, kash doll ft. summer walker",
+                    "text": "don't kick it with no lames, send them back from where they came",
+                    "id": 923
           },
           {
-                    "noteTitle": "test note",
-                    "noteBody": "eventually this is a note that I will delete, but lets see if i can post it first and then add an id to it",
-                    "id": 885
-          },
-          {
-                    "noteTitle": "test note",
-                    "noteBody": "eventually this is a note that I will delete, but lets see if i can post it first and then add an id to it",
-                    "id": 785
-          },
-          {
-                    "noteTitle": "test note",
-                    "noteBody": "eventually this is a note that I will delete, but lets see if i can post it first and then add an id to it",
-                    "id": 521
-          },
-          {
-                    "noteTitle": "test note",
-                    "noteBody": "eventually this is a note that I will delete, but lets see if i can post it first and then add an id to it",
-                    "id": 244
-          },
-          {
-                    "noteTitle": "test note",
-                    "noteBody": "eventually this is a note that I will delete, but lets see if i can post it first and then add an id to it",
-                    "id": 64
-          },
-          {
-                    "noteTitle": "test note",
-                    "noteBody": "eventually this is a note that I will delete, but lets see if i can post it first and then add an id to it",
-                    "id": 926
-          },
-          {
-                    "noteTitle": "rondo, sasha go hard",
-                    "noteBody": "i feel like a winner call me rondo, all these people feenin for a convo, everybody wit me getting hundos, all these people all on me but they not nuttin tho",
+                    "title": "rondo, sasha go hard",
+                    "text": "i feel like a winner call me rondo, all these people feenin for a convo, everybody wit me getting hundos, all these people all on me but they not nuttin tho",
                     "id": 879
           }
 ]

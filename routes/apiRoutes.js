@@ -1,22 +1,20 @@
 // -------------------------------------------------------------------------- dependencies
 const fs = require("fs");
 const path = require("path");
-
 //  load data
 const notePad = require("../notePad.json");
-// store fs.read notePad file for editing
+// store notePad file for editing    
 const notePadFile = fs.readFileSync(path.resolve("notePad.json"));
 const notePadData = JSON.parse(notePadFile);
-
-
 module.exports = function(app) {
+
 // ---------------------------------------------------------------------------- routing
     // ---------------------------------------- GET requests 
     // return notes from notePad.json
 
     app.get("/api/notes", function(request, response) {
     // return notePad as a json object
-        response.json(notePadData);
+        response.JSON(notePadData);
     });
     // ---------------------------------------- POST requests 
     // add user input response to notePad.json
@@ -25,7 +23,7 @@ module.exports = function(app) {
 
     app.post("/api/notes", function(request, response) {
     // check request.body value
-        // console.log(request.body);
+        console.log(request.body);
 
     // create newNote and add id 
         const newNote = request.body;
@@ -41,7 +39,7 @@ module.exports = function(app) {
             if (err) throw (err);
             console.log(`note id# ${newNoteID} was added!`);
             // return notePad.json file
-            response.json(notePadData);
+            response.JSON(notePadData);
         })
     });
 // ------------------------------------------ DELETE requests 
@@ -66,7 +64,7 @@ module.exports = function(app) {
         console.log(`note id# ${deleteID} was deleted!`);
 
     // return notePadUpdated json data
-        response.json(notePadUpdated);
+        response.JSON(notePadUpdated);
     }); 
     });
 
