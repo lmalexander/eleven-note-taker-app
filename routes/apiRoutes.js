@@ -16,7 +16,7 @@ module.exports = function(app) {
 
     app.get("/api/notes", function(request, response) {
     // return notePad as a json object
-        response.json(notePad);
+        response.json(notePadData);
     });
     // ---------------------------------------- POST requests 
     // add user input response to notePad.json
@@ -41,7 +41,7 @@ module.exports = function(app) {
             if (err) throw (err);
             console.log(`note id# ${newNoteID} was added!`);
             // return notePad.json file
-            response.send(notePadData);
+            response.json(notePadData);
         })
     });
 // ------------------------------------------ DELETE requests 
