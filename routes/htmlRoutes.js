@@ -7,10 +7,10 @@ module.exports = function(app) {
 // ------------------------- html GET request
 // index.html
 app.get("/", function(request, response) {
-    response.sendFile(path.resolve("../public/index.html"));
+    response.sendFile(path.join(__dirname, "../public/index.html"));
 });
 // notes.html
 app.get("/notes", function(request, response) {
-    response.sendFile(path.resolve("../public/notes.html"));
+    response.sendFile(path.resolve(__dirname, "../public/notes.html"));
 });
 };
