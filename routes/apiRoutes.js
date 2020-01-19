@@ -18,7 +18,7 @@ module.exports = function(app) {
         const notePadData = JSON.parse(notePadFile);
 
         // return notePad as a json object
-        response.JSON(notePadData);
+        response.json(notePadData);
     });
 
     // -*-*-*-*-*-*-*-*-*-* POST requests 
@@ -48,7 +48,7 @@ module.exports = function(app) {
             if (err) throw (err);
             console.log(`note id# ${newNoteID} was added!`);
             // return notePad.json file
-            response.JSON(notePadData);
+            response.send(notePadData);
         })
     });
 
@@ -78,7 +78,7 @@ module.exports = function(app) {
         console.log(`note id# ${deleteID} was deleted!`);
 
     // return notePadUpdated json data
-        response.JSON(notePadUpdated);
+        response.send(notePadUpdated);
     }); 
     });
 
