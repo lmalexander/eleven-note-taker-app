@@ -9,19 +9,28 @@ const notePadData = JSON.parse(notePadFile);
 module.exports = function(app) {
 
 // ---------------------------------------------------------------------------- routing
-    // ---------------------------------------- GET requests 
-    // return notes from notePad.json
+    // -*-*-*-*-*-*-*-*-*-* GET requests 
+    // -* return notes from notePad.json
 
     app.get("/api/notes", function(request, response) {
-    // return notePad as a json object
+        // store notePad file for editing
+        const notePadFile = fs.readFileSync(path.resolve("notePad.json"));
+        const notePadData = JSON.parse(notePadFile);
+
+        // return notePad as a json object
         response.JSON(notePadData);
     });
-    // ---------------------------------------- POST requests 
-    // add user input response to notePad.json
-    // includes unique ID for note id/deletion
-    // return notePad to client 
+
+    // -*-*-*-*-*-*-*-*-*-* POST requests 
+    // -* add user input response to notePad.json
+    // -* includes unique ID for note id/deletion
+    // -* return notePad to client 
 
     app.post("/api/notes", function(request, response) {
+        // store notePad file for editing
+        const notePadFile = fs.readFileSync(path.resolve("notePad.json"));
+        const notePadData = JSON.parse(notePadFile);   
+
     // check request.body value
         console.log(request.body);
 
@@ -42,13 +51,18 @@ module.exports = function(app) {
             response.JSON(notePadData);
         })
     });
-// ------------------------------------------ DELETE requests 
-    // recieve an ID query of a note to delete
-    // read notes from notePad.json
-    // remove note corresponding to id query
-    // rewrite notes to notePad.json
+
+//  -*-*-*-*-*-*-*-*-*-* DELETE requests 
+    // -* recieve an ID query of a note to delete
+    // -* read notes from notePad.json
+    // -* remove note corresponding to id query
+    // -* rewrite notes to notePad.json
 
     app.delete("/api/notes/:id", function(request, response) {
+    // store notePad file for editing
+    const notePadFile = fs.readFileSync(path.resolve("notePad.json"));
+    const notePadData = JSON.parse(notePadFile);
+
     // console.log client request
         console.log(request.params.id);
 
